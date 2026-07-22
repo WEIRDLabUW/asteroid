@@ -1,0 +1,9 @@
+# Darkroom (20x20, horizon 200) — harder sparse-reward 2D goal search.
+env_name: darkroom-hard
+dataset_size: 20000
+n_envs: 1000
+batch_size: 64
+num_epochs: 100
+eval_episodes: 40
+dagger_steps: 5
+n_episodes: 5
