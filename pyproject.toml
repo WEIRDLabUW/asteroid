@@ -1,0 +1,36 @@
+[project]
+name = "asteroid-icl"
+version = "0.1.0"
+description = "ASTEROID: Asymmetric On-Policy Distillation Learns In-Context Exploration"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "numpy<2",
+    "torch>=2.0",
+    "transformers>=4.30",
+    "tqdm",
+    "wandb",
+    "matplotlib",
+    "scipy",
+    "gym==0.23.1",
+    "imageio",
+    "pillow",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+# Recurrent-PPO baselines (RL2) and privileged-critic utilities.
+baselines = [
+    "stable-baselines3>=2.0",
+    "sb3-contrib>=2.0",
+    "gymnasium>=0.28",
+]
+# Procgen maze benchmark (eval videos + visitation-heatmap plotting).
+procgen = ["procgen", "gymnasium>=0.28", "imageio-ffmpeg", "seaborn"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["datasets", "environments", "models", "experiments"]

@@ -1,0 +1,9 @@
+# 2D point-mass navigation to a hidden goal (horizon 20), resets each episode.
+env_name: navigation-episodic
+dataset_size: 10000
+n_envs: 1000
+batch_size: 64
+num_epochs: 100
+eval_episodes: 40
+dagger_steps: 5
+n_episodes: 5

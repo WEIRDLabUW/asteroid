@@ -1,0 +1,9 @@
+# Key-Door (5x5, horizon 50) — one-time reward for key then door.
+env_name: keydoor-nonmarkovian
+dataset_size: 10000
+n_envs: 1000
+batch_size: 64
+num_epochs: 100
+eval_episodes: 40
+dagger_steps: 5
+n_episodes: 5

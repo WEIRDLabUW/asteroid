@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+build/
+dist/
+
+# All experiment outputs: checkpoints, evals, logs, plots, and archived code
+results/
+context_results/
+wandb/
+slurm_logs*/
+
+# Data & model artifacts (always written under results/)
+*.pkl
+*.pt
+*.npz
+*.png
+
+# Large paper PDF stays local
+*.pdf
